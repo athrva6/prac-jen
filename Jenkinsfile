@@ -36,7 +36,7 @@ pipeline {
                 expression {params.ENVIRONMENT==production}
             }
             steps {
-              input message: 'Deploy to production?'
+              input message:'Deploy to production?'
             }
         }
 
