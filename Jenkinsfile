@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     parameters {
-        choice(name: 'ENVIRONMENT', choices: [‘staging’,’production’], description: 'Target environment')
+        choice(name: 'ENVIRONMENT', choices: ['staging','production'], description: 'Target environment')
     }
 
     environment {
@@ -33,7 +33,7 @@ pipeline {
 
         stage('Approve') {
             when {
-                expression { params.ENVIRONMENT == production }
+                expression {params.ENVIRONMENT==production}
             }
             steps {
               input message: 'Deploy to production?'
