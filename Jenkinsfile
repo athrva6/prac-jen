@@ -25,7 +25,7 @@ pipeline {
                 }
                 stage('Integration') {
                     steps {
-                        sh ‘echo Running Integration’
+                        sh 'echo Running Intergration'
                     }
                 }
             }
